@@ -1,0 +1,159 @@
+{
+  "source": "requirements.docx",
+  "page_setup": {
+    "page_width_cm": 21.00086111111111,
+    "page_height_cm": 29.70036111111111,
+    "top_margin_cm": 3.5013194444444444,
+    "bottom_margin_cm": 4.0005,
+    "left_margin_cm": 2.8010555555555556,
+    "right_margin_cm": 2.8010555555555556,
+    "gutter_cm": 0.5009444444444444,
+    "orientation": "PORTRAIT"
+  },
+  "body": {
+    "font_name": "黑体",
+    "font_size_pt": 167249.23076923078,
+    "alignment": "CENTER",
+    "line_spacing": 4483.812867647059,
+    "space_before_pt": 252095.0,
+    "space_after_pt": 164147.5
+  },
+  "headings": {
+    "0": {
+      "font_name": "黑体",
+      "font_size_pt": null,
+      "alignment": null,
+      "line_spacing": null,
+      "bold": false,
+      "space_before_pt": null,
+      "space_after_pt": null
+    },
+    "1": {
+      "font_name": null,
+      "font_size_pt": null,
+      "alignment": null,
+      "line_spacing": null,
+      "bold": false,
+      "space_before_pt": null,
+      "space_after_pt": null
+    },
+    "2": {
+      "font_name": null,
+      "font_size_pt": null,
+      "alignment": null,
+      "line_spacing": null,
+      "bold": false,
+      "space_before_pt": null,
+      "space_after_pt": null
+    },
+    "3": {
+      "font_name": null,
+      "font_size_pt": null,
+      "alignment": "LEFT",
+      "line_spacing": 1.5,
+      "bold": false,
+      "space_before_pt": 107950.0,
+      "space_after_pt": 107950.0
+    }
+  },
+  "styles_summary": {
+    "paragraph_styles": [
+      {
+        "name": "Normal",
+        "count": 171
+      },
+      {
+        "name": "论文正文",
+        "count": 68
+      },
+      {
+        "name": "参考文献内容",
+        "count": 33
+      },
+      {
+        "name": "ABTSTRACT内容",
+        "count": 16
+      },
+      {
+        "name": "toc 2",
+        "count": 15
+      },
+      {
+        "name": "Heading 2",
+        "count": 15
+      },
+      {
+        "name": "摘要内容",
+        "count": 10
+      },
+      {
+        "name": "toc 1",
+        "count": 10
+      },
+      {
+        "name": "图-中文题注",
+        "count": 9
+      },
+      {
+        "name": "Title",
+        "count": 6
+      },
+      {
+        "name": "toc 3",
+        "count": 5
+      },
+      {
+        "name": "表-中文题注",
+        "count": 5
+      },
+      {
+        "name": "Heading 1",
+        "count": 5
+      },
+      {
+        "name": "Heading 3",
+        "count": 5
+      },
+      {
+        "name": "图表",
+        "count": 5
+      },
+      {
+        "name": "中文封面-题头",
+        "count": 3
+      },
+      {
+        "name": "英文封面-题头",
+        "count": 2
+      },
+      {
+        "name": "中文封面-论文标题",
+        "count": 1
+      },
+      {
+        "name": "中文封面-单位与时间",
+        "count": 1
+      },
+      {
+        "name": "英文封面-论文标题",
+        "count": 1
+      },
+      {
+        "name": "英文封面-单位与时间",
+        "count": 1
+      },
+      {
+        "name": "ABSTRACT处论文标题",
+        "count": 1
+      },
+      {
+        "name": "表-英文题注",
+        "count": 1
+      },
+      {
+        "name": "正文后的题目",
+        "count": 1
+      }
+    ]
+  }
+}
