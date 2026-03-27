@@ -1,4 +1,4 @@
-﻿% 东华大学硕士学位毕业论文（硕士版样式）
+% 东华大学硕士学位毕业论文（硕士版样式）
 \ProvidesPackage{resume/dhuMasterstyle}
 
 % 页面尺寸（依据 requirements.docx 中 page_setup）
@@ -72,9 +72,11 @@
 
 % 图片设置
 \usepackage{caption}
+\usepackage{bicaption}                        % 支持中英文双语图题
 \usepackage{float}
-\usepackage{subfigure}
+\usepackage{subcaption}                       % 现代化子图管理
 \usepackage{graphicx}
+\usepackage{setspace}                         % 用于控制行距
 
 % 表格设置
 \usepackage{booktabs}
@@ -220,14 +222,60 @@
 \newtheorem{conclusion}{结论}
 \newtheorem{assumption}{假设}
 
-%%%%%%%%%%%%%%% 图片环境设置 %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% 图片与表格环境设置（双语与细化规范） %%%%%%%%%%%%%%%
 \counterwithin{figure}{section}
-\captionsetup{font={bf}}
 \renewcommand{\thefigure}{\thesection{}-\arabic{figure}}
 
-%%%%%%%%%%%%%%% 表格环境设置 %%%%%%%%%%%%%%%
 \counterwithin{table}{section}
 \renewcommand{\thetable}{\thesection{}-\arabic{table}}
+
+% 自定义标签格式：去除编号与名称之间的空格（如：图1-1）
+\DeclareCaptionLabelFormat{dhuLabel}{#1#2}
+% 自定义分隔符
+\DeclareCaptionLabelSeparator{rparen}{) }
+
+% 全局图表题格式设置（五号 10.5pt，单倍行距，居中）
+\captionsetup{
+    labelformat=dhuLabel,   % 使用自定义格式去除空格
+    font={small},           % 五号 10.5pt
+    labelfont={bf},         % 标签加粗
+    labelsep=quad,          % 编号与标题间空一格
+    justification=centering,
+    singlelinecheck=off,
+    font={small, stretch=1.0} % 单倍行距
+}
+
+% 针对图的特殊间距设置
+\captionsetup[figure]{
+    position=bottom,
+    skip=10pt,              % 图与图题的间距
+    belowskip=12pt          % 图题下方的间距（对应“空一行”）
+}
+
+% 针对表的特殊间距设置
+\captionsetup[table]{
+    position=top,
+    skip=10pt,
+    belowskip=10pt
+}
+
+% 双语图题设置 (bicaption)
+% 绕过 bi-separator 兼容性问题，直接在第二语言名称中加入换行
+\captionsetup[bi-first]{name=图}
+\captionsetup[bi-second]{name={\\ Fig}} % 在英文前缀前强制换行
+\captionsetup[table][bi-second]{name={\\ Table}}
+
+% 分图题设置：置于分图之下，分图号用 a)、b)
+\captionsetup[subfigure]{
+    labelformat=simple,
+    labelsep=rparen,        % 分图号后面带括弧 a)
+    font={small},
+    justification=centering
+}
+\renewcommand{\thesubfigure}{\alph{subfigure}} % a, b, c...
+
+% 定义一个方便的快捷命令，用于右上角标引文献（图题引用）
+\newcommand{\citecaption}[1]{\textsuperscript{\cite{#1}}}
 
 %%%%%%%%%%%%%%% 参考文献 %%%%%%%%%%%%%%%
 \newlength{\bibitemsep}\setlength{\bibitemsep}{.01\baselineskip plus .005\baselineskip minus .005\baselineskip}
