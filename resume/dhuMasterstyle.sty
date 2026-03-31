@@ -84,6 +84,7 @@
 \usepackage{bigstrut}
 \usepackage{rotating}
 \usepackage{tabularx}
+\usepackage{arydshln}
 
 
 %%%%%%%%%%%%%%% 重写题目（封面） %%%%%%%%%%%%%%%
@@ -261,8 +262,9 @@
 
 % 双语图题设置 (bicaption)
 % 绕过 bi-separator 兼容性问题，直接在第二语言名称中加入换行
-\captionsetup[bi-first]{name=图}
-\captionsetup[bi-second]{name={\\ Fig}} % 在英文前缀前强制换行
+\captionsetup[figure][bi-first]{name=图}
+\captionsetup[figure][bi-second]{name={\\ Fig}} % 在英文前缀前强制换行
+\captionsetup[table][bi-first]{name=表}
 \captionsetup[table][bi-second]{name={\\ Table}}
 
 % 分图题设置：置于分图之下，分图号用 a)、b)
